@@ -74,13 +74,12 @@ else
 
 @code {
     [Parameter]
-    public string BookId { get; set; }
+    public string? BookId { get; set; }
 
     private Book? Book { get; set; } 
 
     protected override async Task OnInitializedAsync()
     {
-        
-        Book = await BookService.GetBookByIdAsync(int.Parse(BookId));
+        if (BookId != null) Book = await BookService.GetBookByIdAsync(int.Parse(BookId));
     }
 }

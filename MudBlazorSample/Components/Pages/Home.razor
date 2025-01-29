@@ -1,0 +1,67 @@
+﻿@page "/"
+@using Color = MudBlazor.Color
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-2">Blazor Hybrid</MudText>
+<MudText Color="Color.Primary" Class="mb-4">MudBlazor</MudText>
+@* <MudGrid>
+    <MudItem xs="12" sm="4" md="4">
+        <MudCard Elevation="25">
+            <MudCardContent>
+                <div class="d-flex justify-center mb-4">
+                   
+                    <MudAvatar  Style="height:250px; width:250px;">
+                        <MudImage Src="images/profile-default.jpg"></MudImage>
+                    </MudAvatar>
+                </div>
+                <MudText Typo="Typo.h6" Align="Align.Center">Junindar</MudText>
+                <MudText Align="Align.Center">Jun</MudText>
+            </MudCardContent>
+            <MudCardActions Class="d-flex justify-center">
+               
+                <MudButton HtmlTag="label"
+                           Variant="Variant.Text"
+                           Color="Color.Primary"
+                           Size="Size.Small"
+                           StartIcon="@Icons.Material.Filled.CloudUpload"
+                           for="fileInput">
+                    Upload Image
+                </MudButton>
+                
+            </MudCardActions>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12" sm="8" md="8">
+       
+           
+            <MudCard Elevation="25">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText>Profile Details</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudGrid>
+                        <MudItem xs="12" md="6">
+                            <MudTextField @bind-Value="Nama" Label="Nama" Variant="Variant.Outlined" />
+                        </MudItem>
+                        <MudItem xs="12" md="6">
+                            <MudTextField @bind-Value="Username" Label="Username" Variant="Variant.Outlined"  />
+                        </MudItem>
+                        <MudItem xs="12" md="6">
+                            <MudTextField @bind-Value="Role" Label="Role" Variant="Variant.Outlined"  />
+                        </MudItem>
+                        
+                    
+                    </MudGrid>
+                </MudCardContent>
+                <MudCardActions Class="pb-4 pl-4">
+                    <MudButton Variant="Variant.Filled"  Color="Color.Primary" Class="ml-auto" ButtonType="ButtonType.Submit">Save Changes</MudButton>
+                </MudCardActions>
+            </MudCard>
+       
+    </MudItem>
+</MudGrid> *@
+@code {
+    public string Nama { get; set; } = "Junindar";
+    public string Username { get; set; } = "Jun";
+    public string Role { get; set; } = "Admin";
+}

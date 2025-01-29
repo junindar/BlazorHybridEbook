@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+<AuthorizeView>
+    <Authorized>
+        Welcome to your new app.
+    </Authorized>
+  
+    <NotAuthorized>
+        Please Login
+    </NotAuthorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Admin">
+    <div style="background-color:#444;color:white;padding:10px;">
+        This only visible for Admin Role
+    </div>
+   
+</AuthorizeView>

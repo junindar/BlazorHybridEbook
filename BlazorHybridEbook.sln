@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Introduction", "Introduction\Introduction.csproj", "{D22E5465-A9F9-45DD-85B5-9E645DB5F97A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Introduction", "Introduction\Introduction.csproj", "{D22E5465-A9F9-45DD-85B5-9E645DB5F97A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogComponent", "DialogComponent\DialogComponent.csproj", "{DB7C5E8F-491C-485D-934C-D88381EE2141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DialogComponent", "DialogComponent\DialogComponent.csproj", "{DB7C5E8F-491C-485D-934C-D88381EE2141}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Latihan.Library", "Latihan.Library\Latihan.Library.csproj", "{AF1427D0-72E9-4EE8-ABA6-29879F7AC028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppWithRCL", "MauiAppWithRCL\MauiAppWithRCL.csproj", "{9D43FA07-5ADA-4FAD-AAE5-889DDE5C1FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppWithRCL", "MauiAppWithRCL\MauiAppWithRCL.csproj", "{9D43FA07-5ADA-4FAD-AAE5-889DDE5C1FFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppWithRCL", "BlazorWebAppWithRCL\BlazorWebAppWithRCL.csproj", "{E636D56B-2C7F-4542-AF3B-8627FA1F945E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAppWithRCL", "BlazorWebAppWithRCL\BlazorWebAppWithRCL.csproj", "{E636D56B-2C7F-4542-AF3B-8627FA1F945E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAuth", "BlazorAuth\BlazorAuth.csproj", "{095054D3-811A-4013-882C-13E69E4EDF01}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorLogin", "BlazorLogin\BlazorLogin.csproj", "{3BE892B4-3312-4704-869A-F352BC3EBAA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MudBlazorSample", "MudBlazorSample\MudBlazorSample.csproj", "{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,24 @@ Global
 		{E636D56B-2C7F-4542-AF3B-8627FA1F945E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E636D56B-2C7F-4542-AF3B-8627FA1F945E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E636D56B-2C7F-4542-AF3B-8627FA1F945E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095054D3-811A-4013-882C-13E69E4EDF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095054D3-811A-4013-882C-13E69E4EDF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095054D3-811A-4013-882C-13E69E4EDF01}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{095054D3-811A-4013-882C-13E69E4EDF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095054D3-811A-4013-882C-13E69E4EDF01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095054D3-811A-4013-882C-13E69E4EDF01}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3BE892B4-3312-4704-869A-F352BC3EBAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE892B4-3312-4704-869A-F352BC3EBAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE892B4-3312-4704-869A-F352BC3EBAA0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3BE892B4-3312-4704-869A-F352BC3EBAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE892B4-3312-4704-869A-F352BC3EBAA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE892B4-3312-4704-869A-F352BC3EBAA0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57897BF0-0C08-43C3-BB8D-4A17CC14EDF6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

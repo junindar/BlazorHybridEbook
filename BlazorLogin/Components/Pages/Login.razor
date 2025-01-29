@@ -1,0 +1,88 @@
+﻿@page "/Login"
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavigationManager
+@inject IUserService UserService
+
+
+<EditForm Model="@user" OnValidSubmit="@ValidateUser">
+    @*Detail sintaks pada project lampiran*@
+    <div>
+
+    </div>
+    <div>
+        <h3 style="font-weight: bold;">Login</h3>
+    </div>
+    <div>
+        <br/>
+    </div>
+    <div class="col-9 row">
+        <input class="form-control col-12" @bind="user.Username" placeholder="Username"/>
+    </div>
+    <br/>
+    <div class="col-9 row">
+        <input type="password" class="form-control col-12" @bind="user.Password" placeholder="password"/>
+    </div>
+    <br/>
+    <div class="col-3 row">
+        <span class="col-12"></span>
+        <input type="submit" class="form-control col-6 btn btn-danger" value="Login"/>
+
+    </div>
+    <br/>
+    <div class="col-12 row" style="text-align: left; font-weight: bold">
+        <span class="col-12">@LoginMesssage</span>
+    </div>
+</EditForm>
+@code {
+
+
+    private User user = new();
+    public string LoginMesssage { get; set; }
+    ClaimsPrincipal claimsPrincipal;
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = new User();
+
+        claimsPrincipal = (await authenticationStateTask).User;
+
+        if (claimsPrincipal.Identity != null && claimsPrincipal.Identity.IsAuthenticated)
+        {
+            ((CustomAuthStateProvider)AuthStateProvider).Logout();
+        }
+            
+
+    }
+
+    protected async Task<bool> ValidateUser()
+    {
+        if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
+        {
+            LoginMesssage = "Username and Password are required";
+            return await Task.FromResult(false);
+        }
+        var loginUser = await  UserService.LoginAsync(user.Username);
+        if (loginUser == null)
+        {
+            LoginMesssage = "Invalid username or password";
+            return await Task.FromResult(false);
+        }
+        if (loginUser.Password != user.Password)
+        {
+            LoginMesssage = "Invalid username or password";
+            return await Task.FromResult(false);
+        }
+       
+        var authState = (CustomAuthStateProvider)AuthStateProvider;
+        await authState.LogInAsync(loginUser);
+        NavigationManager.NavigateTo("/");
+        
+        return await Task.FromResult(true);
+
+            
+
+    }
+}

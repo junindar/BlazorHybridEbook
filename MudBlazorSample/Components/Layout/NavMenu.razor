@@ -1,0 +1,19 @@
+﻿<MudDrawerHeader>
+    <MudAvatar Color="Color.Primary" Variant="Variant.Outlined">
+        <MudIcon Icon="@Icons.Custom.Brands.MudBlazor" />
+    </MudAvatar>
+    <MudText Typo="Typo.h5" Color="Color.Primary" Style="margin-top:10px; margin-left:15px;">Crystal</MudText>
+</MudDrawerHeader>
+<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+    <MudNavLink Href="/Table1" Icon="@Icons.Material.Filled.Storage">Table 1</MudNavLink>
+    <MudNavLink Href="/TablePaging" Icon="@Icons.Material.Filled.Storage">Table Paging</MudNavLink>
+    <MudNavLink Href="/TableGrouping" Icon="@Icons.Material.Filled.Storage">Table Grouping</MudNavLink>
+    <MudNavLink Href="/SampleTextField" Icon="@Icons.Material.Filled.Storage">Sample TextField</MudNavLink>
+    <MudNavLink Href="/SampleNumericField" Icon="@Icons.Material.Filled.Storage">Sample NumericField</MudNavLink>
+    <MudNavLink Href="/SampleSelect" Icon="@Icons.Material.Filled.Storage">Sample Select</MudNavLink>
+    <MudNavGroup Title="Expanding" Icon="@Icons.Material.Filled.DashboardCustomize" Expanded="true">
+        <MudNavLink Href="/" Icon="@Icons.Material.Filled.Camera">Themes</MudNavLink>
+        <MudNavLink Href="#" Icon="@Icons.Material.Filled.Celebration">Party</MudNavLink>
+    </MudNavGroup>
+</MudNavMenu>
